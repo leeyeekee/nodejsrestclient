@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>Existing Data from External API</h2>
+
+<a href="/">Back to Main Page</a> 
+<ul>
+    <% mascots.forEach(function(mascot) { %>
+      <li>
+        <strong><%= mascot.id %></strong>
+        name <%= mascot.name %>,
+        username <%= mascot.username %>
+      </li>
+    <% }); %>
+  </ul>
+</body>
+</html>

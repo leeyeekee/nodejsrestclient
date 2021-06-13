@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<title>Add Data</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+</head>
+<body class="container" style="margin-top: 50px;">
+    <div class="card"> 
+    	<div class="card-header">
+			Add Data
+		</div>
+        <div class="card-body">
+            <form action="/postdata" method="POST">
+                <div class="form-group">
+                    <label>Name:</label>
+                    <input type="text" class="form-control" name="name" value="" autocomplete="off">
+                </div>
+                <div class="form-group">
+                    <label>Address:</label>
+                    <input type="text" class="form-control" name="address" value="" autocomplete="off">
+                </div>
+                <div class="form-group">
+                    <input type="submit" class="btn btn-info" value="Add"/>
+                </div>
+            </form>
+        </div>
+    </div>
+    <a href="/">Back to Main Page</a> 
+</body>
+</html>
