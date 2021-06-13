@@ -4,7 +4,7 @@ const json2html = require('node-json2html');
 var bodyParser = require('body-parser');
 var urlencodedParser = bodyParser.urlencoded({ extended: false });
 const axios = require('axios');
-var main_url = = process.env.TARGET;
+var main_url = process.env.TARGET;
 //var main_url = "http://studentportal-sample.2886795288-80-hazel04.environments.katacoda.com";
 var main_url_list = main_url + "/students";
 var main_url_post = main_url + "/add";
