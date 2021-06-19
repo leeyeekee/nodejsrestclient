@@ -9,6 +9,7 @@ var main_url ="http://" + process.env.STUDENTPORTAL_SERVICE_HOST + ":" + process
 //var main_url = "http://studentportal-sample.2886795288-80-hazel04.environments.katacoda.com";
 var main_url_list = main_url + "/students";
 var main_url_post = main_url + "/add";
+var servinghostname = process.env.HOSTNAME;
 
 // set the view engine to ejs
 app.set('view engine', 'ejs');
@@ -17,7 +18,7 @@ app.set('view engine', 'ejs');
 
 // index page
 app.get('/', function(req, res) {
-  res.render('pages/main');
+  res.render('pages/main', {data: req.body});
 });
 
 // render json page
@@ -90,3 +91,4 @@ app.listen(8080);
 console.log('Server is listening on port 8080');
 console.log(main_url_list);
 console.log(main_url_post);
+console.log(servinghostname);
