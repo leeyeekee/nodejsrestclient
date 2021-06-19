@@ -15,10 +15,10 @@ remember to choose to create a deployment config.
 Set these to point to the mysql service database_user and database_password respectively.
 6. Click on the springboot service route to ensure the springboot service is available. <serivce route>/students should return list of json records.
 7. Use a rest api tool such as Postman, execute a post call to <serivce route>/add with the josn body such as {"id":"223","name":"MAMAM","address":"kaka"}, 
-try a few times until you see that the post return with a success json entry correlating the json body. Refresh <serivce route>/students to ensure the newly
-insert record appears in the json record list.
-8. Add a nodejs service using this git option pointing to https://github.com/leeyeekee/nodejsrestclient.git, name the service e.g. studentfront.
-9. You should be able to load the nodejs client route, list the database records from the backend springboot service and create a record. 
+try a few times until you see that the post return with a success json entry correlating the json body. 
+8. Refresh <serivce route>/students to ensure the newly insert record appears in the json record list.
+9. Add a nodejs service using this git option pointing to https://github.com/leeyeekee/nodejsrestclient.git, name the service e.g. studentfront.
+10. You should be able to load the nodejs client route, list the database records from the backend springboot service and create a record. 
 
 YouTube video for the demo can be found @ https://youtu.be/p0-uR3mqkgc
 
