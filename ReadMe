@@ -1,8 +1,6 @@
 This is a sample nodejs client to call a springboot backend rest api to list data and add data from and to a mysql database. 
 
-This is deployable to OpenShift cluster.
-
-It has a TARGET environment variable which needs to be set to the URL of a deployed springboot backend rest api service.
+This is deployable on an OpenShift 4 cluster.
 
 Reference to the springboot backend could be found @ https://github.com/leeyeekee/SpringbootOpenshitMysqlDemo.git.
 
@@ -15,12 +13,13 @@ Deployment steps:
 remember to choose to create a deployment config.
 5. While waiting for the springboot service to spin up, add 2 environment variables from secret to the studentportal service, DB_USERNAME and DB_PASSWORD. 
 Set these to point to the mysql service database_user and database_password respectively.
-6. Add a nodejs service using this git option pointing to https://github.com/leeyeekee/nodejsrestclient.git, name the service e.g. studentfront.
-7. Test the springboot backend service using the route. You should be able to retrieve a list of the students.
-8. Copy the URL of the springboot backend service, add a environment variable i.e. TARGET to the nodejs service and set the value to the copied springboot backend 
-service URL.
-9. You should be able to load the nodejs client route, list the database records from the backend springboot service and create a record. The database record 
-consists of an ID, name and address.
-10. Stay tuned for a recording of this demo in due time.
+6. Click on the springboot service route to ensure the springboot service is available. <serivce route>/students should return list of json records.
+7. Use a rest api tool such as Postman, execute a post call to <serivce route>/add with the josn body such as {"id":"223","name":"MAMAM","address":"kaka"}, 
+try a few times until you see that the post return with a success json entry correlating the json body. Refresh <serivce route>/students to ensure the newly
+insert record appears in the json record list.
+8. Add a nodejs service using this git option pointing to https://github.com/leeyeekee/nodejsrestclient.git, name the service e.g. studentfront.
+9. You should be able to load the nodejs client route, list the database records from the backend springboot service and create a record. 
 
-Enjoy deploying to these to OpenShift.
+YouTube video for the demo can be found @ https://youtu.be/p0-uR3mqkgc
+
+Enjoy deploying these on OpenShift.
