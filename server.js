@@ -18,7 +18,7 @@ app.set('view engine', 'ejs');
 
 // index page
 app.get('/', function(req, res) {
-  res.render('pages/main', {data: req.body});
+  res.render('pages/main', {data: servinghostname});
 });
 
 // render json page
